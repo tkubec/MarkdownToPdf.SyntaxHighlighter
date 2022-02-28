@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0-beta</version>
+    <title>Syntax highlighter plugin for  MarkdownToPdf Library</title>
+    <authors>Tomas Kubec</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/tkubec/MarkdownToPdf.SyntaxHighlighter</projectUrl>
+    <description>Syntax highlighter plugin for  MarkdownToPdf Library using PrismSharp.
+</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright © 2022 Tomas Kubec</copyright>
+    <repository type="git" url="https://github.com/tkubec/MarkdownToPdf.SyntaxHighlighter.git"  />
+    <tags>MarkDownToPdf syntax highlighter plugin</tags>
+     <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
+  </metadata>
+</package>

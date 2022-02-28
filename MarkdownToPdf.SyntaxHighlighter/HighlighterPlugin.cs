@@ -15,21 +15,37 @@ using System.Threading.Tasks;
 
 namespace Orionsoft.MarkdownToPdfLib.SyntaxHighlighter
 {
+    /// <summary>
+    ///  Main Plugin class to be registerd wit MarkdownToPdf PluginManage
+    /// </summary>
     public class HighlighterPlugin : IHighlightingPlugin
     {
-        private Tokenizer tokenizer;
+        private readonly Tokenizer tokenizer;
         private Highlighter highlighter;
         private ThemeNames themeName;
 
-        public ThemeNames ThemeName { get => themeName ; set => SetTheme(value); }
+        /// <summary>
+        ///  Name of theme to be used
+        /// </summary>
+        public ThemeNames ThemeName { get => themeName; set => SetTheme(value); }
 
 
+        /// <summary>
+        ///  Plugin constructor
+        /// </summary>
         public HighlighterPlugin()
         {
             tokenizer = new Tokenizer();
             highlighter = new Highlighter(tokenizer, Theme.Load(themeName));
             
         }
+
+        /// <summary>
+        ///  Method called from the libraryfor the conversion
+        /// </summary>
+        /// <param name="lines"></param>
+        /// <param name="converter"></param>
+        /// <returns></returns>
         public HighlightingPluginResult Convert(List<string> lines, IElementConverter converter)
         {
             var lang = converter.Attributes.Info?.ToLower();
